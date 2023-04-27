@@ -8,12 +8,13 @@ import {
   Patch,
   Delete,
 } from '@nestjs/common';
+import { CreateUserDTO } from './dto/create-user.dto';
 
 @Controller('users')
 export class UserController {
   @Post()
-  async create(@Body() body) {
-    return { body };
+  async create(@Body() { email, name, password }: CreateUserDTO) {
+    return { email, name, password };
   }
 
   @Get()
