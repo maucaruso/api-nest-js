@@ -13,7 +13,7 @@ export class LogInterceptor implements NestInterceptor {
         const request = context.switchToHttp().getRequest();
 
         console.log(`URL: ${request.url}`);
-        console.log(request);
+        // console.log(request);
         console.log(`Execução levou ${Date.now() - dt}`);
       }),
     );
