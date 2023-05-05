@@ -15,10 +15,6 @@ export class UserService {
         name,
         password,
       },
-      select: {
-        id: true,
-        name: true,
-      },
     });
   }
 
